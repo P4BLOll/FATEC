@@ -38,7 +38,7 @@ public class MinhaPrimeiraED {
     }
 
     private boolean posicaoValida(int posicao) {
-        return posicao >= 0 && posicao < totalDeObjetos; // Mudança: agora limita corretamente
+        return posicao >= 0 && posicao < totalDeObjetos;
     }
 
     public void remove(int posicao) {
