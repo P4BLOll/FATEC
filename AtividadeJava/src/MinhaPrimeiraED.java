@@ -87,7 +87,7 @@ public class MinhaPrimeiraED {
         MinhaPrimeiraED lista = new MinhaPrimeiraED();
         lista.adiciona("A");
         lista.adiciona("B");
-        lista.adiciona(1, "C");
+        lista.adiciona(2, "C");
         lista.remove(1);
         lista.contem("A");
         System.out.println("Tamanho do Vetor: "+lista.tamanho());
