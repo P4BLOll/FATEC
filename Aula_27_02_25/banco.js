@@ -31,7 +31,7 @@ const Agendamentos = sequelize.define('agendamentos',{
     }
 })
 
-//Agendamentos.sync({force: false})
+//Agendamentos.sync({force: true})
 
 Agendamentos.create({
     nome: 'João',
