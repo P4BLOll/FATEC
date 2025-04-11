@@ -28,7 +28,7 @@ app.post("/cadastrar", function(req, res){
     Post.create({
         nome: req.body.nome,
         telefone: req.body.telefone,
-        origem: req.body.telefone,
+        origem: req.body.origem,
         data_contato: req.body.data_contato,
         observacao: req.body.observacao
     }).then(function(){
@@ -45,7 +45,7 @@ app.post("/cadastrar", function(req, res){
     Post.update({
         nome: req.body.nome,
         telefone: req.body.telefone,
-        origem: req.body.telefone,
+        origem: req.body.origem,
         data_contato: req.body.data_contato,
         observacao: req.body.observacao
     },
