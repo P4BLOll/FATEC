@@ -1,0 +1,57 @@
+Tipo Abstratos de Dados(TAD): São tipos definidos a partir dos tipos primitivos. Ao especificar uma classe, especifica-se um novo tipo abstrato de dados.
+
+Estruturas de Dados Estáticas: vetores e matrízes. São estáticos pois não permitem alteração de tamanho. São também homogeneos pois armazenam dados do mesmo tipo.
+
+Estrutura de Dados Dinâmicas: filas, listas(não tem restrição de acesso aos dados) e pilhas. são dinâmicas pois permitem alterar o seu tamanho.
+
+Deque(Lista especializada): Pode ser dinâmico(aumenta o tamanho se necessário) ou estático(não altera o tamanho).É possível inserir elementos tanto no início quanto no final do deque. Caso o deque seja dinâmico, ele cria um novo deque maior ou com o dobro do seu tamanho e transfere os dados do deque anterior para o novo criado. O deque será estático caso a dinamicidade não seja específicado. É necessário uma função que o torne dinâmico. No deque duplamente encadeado, é implementado a idéia de Nós, onde cada elemento armazena um elemento sucessor a ele. Então, caso haja apenas um Nó, o próximo adicionado sera ligado a ele como seu próximo, e assim por diante.
+
+Fila Circular: Este conceito utiliza ponteiros, onde o ponterio Inicio aponta para o começo da Fila, e o ponteiro Fim aponta para o ultimo campo da Fila. Ao excluir elementos do início, o ponteiro Inicio aponta para o sucessor do objeto excluído. Caso todos os elementos sejam excluidos, os ponteiros resetam e apontam para o primeiro campo novamente.
+
+Pilha: Segue a política LIFO(Last In, First Out). Os itens de uma Pilha são empilhados um sobre o outro. Todas as inserções e retiradas são realizadas em uma única extremidade da Pilha. Possui duas operações basicas: Push(Acrescentar no topo da pilha) e Pop(Retirar do topo da pilha).
+
+Método construtor: Utilizado para instanciar(exemplificar, alocar memória p/ objeto) e inicializar os objeto da classe.
+
+
+Ex: 
+
+Classe Lista
+
+	- listaDeEspera[] : Estudante -> estudante é uma classe que especifica as caracteristicas de um estudante. o vetor listaDeEspera irá armazenar estudantes.
+
+	- totalEstudantes : int -> variável do tipo int que armazena a quantidade de estudantes existentes na lista.
+
+----------------------------------------------------------------------------------------------------------------
+	+ addEnd(e : Estudante): void -> função de adicionar um estudante no início da lista. Não retorna nada, apenas adiciona.
+
+	+ addBegin(e : Estudante): void -> função de adicionar um estudante no final da lista. Não retorna nada, apenas adiciona.
+
+	+ search(pos: int) : Estudante -> busca uma posição na lista e retorna o estudante presente nessa posição.
+
+	+ remove (e : Estudante) -> remove sempre o primeiro estudante da lista e não possui retorno.
+
+	+ remove (pos: int) : Estudante -> remove o estudante de uma posição específica. Retorna o estudante que foi removido.
+
+	+ size(): int -> retorna o tamanho atual da lista. Não recebe nada.
+
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+Classe Fila
+
+	- filaDeEspera: Estudante -> estudante é uma classe que especifica as caracteristicas de um estudante.
+
+	- tamanho: int -> variável do tipo int que armazena o tamanho atual da fila.
+
+----------------------------------------------------------------------------------------------------------------
+	+ enqueue(e : Estudante) : void -> adiciona um estudante ao final da fila. Não retorna nada.
+
+	+ dequeue() : Estudante -> remove o primeiro estudante da fila. retorna o estudante removido.
+
+	+ pesquisar(e : Estudante) : boolean -> verifica se um estudante específico está na fila. Retorna verdadeiro ou falso.
+
+	+ concatena(f : Fila) : Fila -> imcorpora duas filas em uma só. Retorna o resultado da fila concatenada.
+
+	+ copia (f : Fila) : void -> compara duas filas, os elementos que pertecem somente a primeira fila passam para a segunda, elementos congruentes permanecem. Não retorna nada.
+
+	+ dividir() : Fila -> divide a fila em duas. Retorna o resultado da fila.
+
